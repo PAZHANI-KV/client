@@ -20,7 +20,7 @@ const Dashboard = () => {
         {activeComponent === 'roleManagement' && (
           <div className="nested">
             <button onClick={() => {setRole('Add');setUser('')}}>Add</button>
-            <button onClick={() => {setRole('View');setUser('')}}>Viewwww</button>
+            <button onClick={() => {setRole('View');setUser('')}}>ViewS</button>
           </div>
         )}
       </ul>
