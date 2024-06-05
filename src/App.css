@@ -54,3 +54,66 @@
 #password {
   margin-left: 10px;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.app {
+  display: flex;
+  height: 100vh; /* Make the app take the full viewport height */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #aed4ff;
+  padding: 20px;
+  height: 100vh; /* Make the sidebar take the full viewport height */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #ddd;
+}
+
+
+.nested {
+  display: flex;
+  list-style-type: none;
+  padding: 5px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #333;
+  outline: none;
+  flex: 1;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Ensure content is scrollable if it overflows */
+}
