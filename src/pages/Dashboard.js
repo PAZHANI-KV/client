@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import AddUser from "../components/AddUser";
+import ViewUser from "../components/ViewUser";
+import AddRole from "../components/AddRole";
+import ViewRole from "../components/ViewRole";
+
+
 
 const Dashboard = () => {
-    const [activeComponent, setActiveComponent] = useState('');
+
+  const [activeComponent, setActiveComponent] = useState('');
   const [user,setUser] = useState ('')
   const [role,setRole] = useState ('')
 
   return (
-    <div className="app">
+    <>
+     <div className="app">
     <div className="sidebar">
       <ul>
         <li onClick={() => setActiveComponent('userManagement')}>User Management</li>
@@ -20,40 +28,24 @@ const Dashboard = () => {
         {activeComponent === 'roleManagement' && (
           <div className="nested">
             <button onClick={() => {setRole('Add');setUser('')}}>Add</button>
-            <button onClick={() => {setRole('View');setUser('')}}>View</button>
+            <button onClick={() => {setRole('View');setUser('')}}>ViewS</button>
           </div>
         )}
       </ul>
-    </div>
-    <div className="main-content">
-      {user === 'Add' && <UserManagement />}
-      {user === 'View' && <RoleManagement />}
-      {role === 'Add' && <RoleManagement />}
-      {role === 'View' && <RoleManagement />}
-    </div>
-  </div>
-
-   
-  )
-}
-
-const UserManagement = () => {
-    return (
       <div>
-        <h2>User Management</h2>
-        {/* Add your user management code here */}
-      </div>
-    );
-  };
-  
-  const RoleManagement = () => {
-    return (
-      <div>
-        <h2>Role Management</h2>
-        {/* Add your role management code here */}
-      </div>
-    );
-  };
-  
+          <button class="logout-button">Logout</button>
 
-export default Dashboard
+          </div>
+        </div>
+        <div className="main-content">
+          {user === "Add" && <AddUser/>}
+          {user === "View" && <ViewUser/>}
+          {role === "Add" && <AddRole/>}
+          {role === "View" && <ViewRole/>}
+        </div>
+    </div>
+    </>
+  );
+};
+
+export default Dashboard;

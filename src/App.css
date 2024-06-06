@@ -83,13 +83,13 @@ html, body {
   border-radius: 6px;
   cursor: pointer;
   background-color: #ddd;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 
 }
-/* 
+
 .sidebar ul li:hover {
-  background-color: #ddd;
-} */
+  transform: scale(1.1); /* Increase the size by 10% */
+} 
 
 .nested {
   display: flex;
@@ -120,3 +120,18 @@ button:hover {
   padding: 20px;
   overflow-y: auto; /* Ensure content is scrollable if it overflows */
 }
+
+.logout-button {
+  position: absolute;
+  bottom: 20px; /* Distance from the bottom of the sidebar */
+  left: 16px;
+  width: 15%;
+  padding: 10px;
+  background-color: gray; /* Red color for logout button */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
